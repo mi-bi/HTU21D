@@ -71,5 +71,5 @@ if __name__ == '__main__':
     try:
        print( "T=",htu.read_temperature())
        print( "H=",htu.read_humidity())
-    except CRCError as e:
+    except IOError as e:
        print( e )
