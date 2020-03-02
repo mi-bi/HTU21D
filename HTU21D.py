@@ -48,6 +48,7 @@ class HTU21D:
 
     def reset(self):
         self.bus.write_byte(I2C_ADDR, CMD_RESET)
+        time.sleep(0.015)
 
     @staticmethod
     def _calculate_checksum(msb,lsb):
